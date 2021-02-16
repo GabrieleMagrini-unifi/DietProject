@@ -23,7 +23,7 @@ public class Paziente extends User{
 
 
     public void addPrescrizione(Period timePeriod,int pesoDesiderato){
-        Prescrizione p = new Prescrizione(this.peso,pesoDesiderato,timePeriod);
+        this.prescrizione = new Prescrizione(this.peso,pesoDesiderato,timePeriod);
         notifyObserver(Observer);
     }
 
@@ -41,20 +41,20 @@ public class Paziente extends User{
             storico.addRisultati(data);
             notifyObserver(Observer);
         }
-    };
+    }
 
     public void seeStorico(){
 
         System.out.print(Arrays.deepToString(storico.getRisultati()));
 
-    };
+    }
 
     public Dieta seeDieta(){
         return null;
-    };
+    }
 
 
-    public void addSgarro(){};
+    public void addSgarro(){}
 
     //Getter and Setter
 
