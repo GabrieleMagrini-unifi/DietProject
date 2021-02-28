@@ -8,7 +8,6 @@ public class Prescrizione extends Observable {
     public Prescrizione(int pesoIniziale,int pesoDesiderato, Period periodo){
         this.pesoIniziale = pesoIniziale;
         this.pesoDesiderato = pesoDesiderato;
-        this.pesoDesiderato = pesoIniziale;
         this.catalogoDiets =  catalogoDiete.getInstance();
         this.dieta = dietaCreator(pesoIniziale,pesoDesiderato);
     };
